@@ -1,0 +1,582 @@
+{
+  "name": "trade",
+  "title": "Trade",
+  "homepage": "https://github.com/knowmoreindia/open-data/tree/main/trade",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0"
+    }
+  ],
+  "sources": [
+    {
+      "title": "DGCI&S Foreign Trade Data Dissemination Portal",
+      "path": "https://ftddp.dgciskol.gov.in/dgcis/"
+    }
+  ],
+  "version": "2026-11-24",
+  "resources": [
+    {
+      "name": "monthly-totals",
+      "path": "data/monthly_totals.csv",
+      "format": "csv",
+      "description": "Exports and imports each month",
+      "schema": {
+        "fields": [
+          {
+            "name": "month",
+            "type": "string",
+            "description": "Month, YYYY-MM"
+          },
+          {
+            "name": "flow",
+            "type": "string",
+            "description": "exports or imports"
+          },
+          {
+            "name": "value_inr",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Value in rupees"
+          },
+          {
+            "name": "value_usd",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Value in US dollars"
+          }
+        ]
+      }
+    },
+    {
+      "name": "countries",
+      "path": "data/monthly/countries.csv",
+      "format": "csv",
+      "description": "Each partner country, each month",
+      "schema": {
+        "fields": [
+          {
+            "name": "month",
+            "type": "string",
+            "description": "Month, YYYY-MM"
+          },
+          {
+            "name": "flow",
+            "type": "string",
+            "description": "exports or imports"
+          },
+          {
+            "name": "country",
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Country of destination for exports, of origin for imports, as DGCI&S spells it"
+          },
+          {
+            "name": "value_inr",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Value in rupees"
+          },
+          {
+            "name": "value_usd",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Value in US dollars"
+          }
+        ]
+      }
+    },
+    {
+      "name": "commodities",
+      "path": "data/monthly/commodities.csv",
+      "format": "csv",
+      "description": "Each commodity group, each month",
+      "schema": {
+        "fields": [
+          {
+            "name": "month",
+            "type": "string",
+            "description": "Month, YYYY-MM"
+          },
+          {
+            "name": "flow",
+            "type": "string",
+            "description": "exports or imports"
+          },
+          {
+            "name": "commodity",
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Principal commodity group, as DGCI&S names it"
+          },
+          {
+            "name": "unit",
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Unit of quantity. Blank where the commodity group has no single unit"
+          },
+          {
+            "name": "quantity",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Quantity, in unit. 0 where no quantity is printed"
+          },
+          {
+            "name": "value_inr",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Value in rupees"
+          },
+          {
+            "name": "value_usd",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Value in US dollars"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ports",
+      "path": "data/monthly/ports.csv",
+      "format": "csv",
+      "description": "Each Indian port, each month",
+      "schema": {
+        "fields": [
+          {
+            "name": "month",
+            "type": "string",
+            "description": "Month, YYYY-MM"
+          },
+          {
+            "name": "flow",
+            "type": "string",
+            "description": "exports or imports"
+          },
+          {
+            "name": "port",
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Indian port, airport, land border post or inland container depot"
+          },
+          {
+            "name": "value_inr",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Value in rupees"
+          },
+          {
+            "name": "value_usd",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Value in US dollars"
+          }
+        ]
+      }
+    },
+    {
+      "name": "commodity-country",
+      "path": [
+        "data/yearly/commodity_country/2000-01.csv",
+        "data/yearly/commodity_country/2001-02.csv",
+        "data/yearly/commodity_country/2002-03.csv",
+        "data/yearly/commodity_country/2003-04.csv",
+        "data/yearly/commodity_country/2004-05.csv",
+        "data/yearly/commodity_country/2005-06.csv",
+        "data/yearly/commodity_country/2006-07.csv",
+        "data/yearly/commodity_country/2007-08.csv",
+        "data/yearly/commodity_country/2008-09.csv",
+        "data/yearly/commodity_country/2009-10.csv",
+        "data/yearly/commodity_country/2010-11.csv",
+        "data/yearly/commodity_country/2011-12.csv",
+        "data/yearly/commodity_country/2012-13.csv",
+        "data/yearly/commodity_country/2013-14.csv",
+        "data/yearly/commodity_country/2014-15.csv",
+        "data/yearly/commodity_country/2015-16.csv",
+        "data/yearly/commodity_country/2016-17.csv",
+        "data/yearly/commodity_country/2017-18.csv",
+        "data/yearly/commodity_country/2018-19.csv",
+        "data/yearly/commodity_country/2019-20.csv",
+        "data/yearly/commodity_country/2020-21.csv",
+        "data/yearly/commodity_country/2021-22.csv",
+        "data/yearly/commodity_country/2022-23.csv",
+        "data/yearly/commodity_country/2023-24.csv",
+        "data/yearly/commodity_country/2024-25.csv",
+        "data/yearly/commodity_country/2025-26.csv",
+        "data/yearly/commodity_country/2026-27.csv"
+      ],
+      "format": "csv",
+      "description": "Each commodity group with each country, each financial year",
+      "schema": {
+        "fields": [
+          {
+            "name": "fiscal_year",
+            "type": "string",
+            "description": "Financial year, April to March, such as 2024-25"
+          },
+          {
+            "name": "flow",
+            "type": "string",
+            "description": "exports or imports"
+          },
+          {
+            "name": "commodity",
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Principal commodity group, as DGCI&S names it"
+          },
+          {
+            "name": "country",
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Country of destination for exports, of origin for imports, as DGCI&S spells it"
+          },
+          {
+            "name": "unit",
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Unit of quantity. Blank where the commodity group has no single unit"
+          },
+          {
+            "name": "quantity",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Quantity, in unit. 0 where no quantity is printed"
+          },
+          {
+            "name": "value_inr",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Value in rupees"
+          },
+          {
+            "name": "value_usd",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Value in US dollars"
+          }
+        ]
+      }
+    },
+    {
+      "name": "commodity-port",
+      "path": [
+        "data/yearly/commodity_port/2000-01.csv",
+        "data/yearly/commodity_port/2001-02.csv",
+        "data/yearly/commodity_port/2002-03.csv",
+        "data/yearly/commodity_port/2003-04.csv",
+        "data/yearly/commodity_port/2004-05.csv",
+        "data/yearly/commodity_port/2005-06.csv",
+        "data/yearly/commodity_port/2006-07.csv",
+        "data/yearly/commodity_port/2007-08.csv",
+        "data/yearly/commodity_port/2008-09.csv",
+        "data/yearly/commodity_port/2009-10.csv",
+        "data/yearly/commodity_port/2010-11.csv",
+        "data/yearly/commodity_port/2011-12.csv",
+        "data/yearly/commodity_port/2012-13.csv",
+        "data/yearly/commodity_port/2013-14.csv",
+        "data/yearly/commodity_port/2014-15.csv",
+        "data/yearly/commodity_port/2015-16.csv",
+        "data/yearly/commodity_port/2016-17.csv",
+        "data/yearly/commodity_port/2017-18.csv",
+        "data/yearly/commodity_port/2018-19.csv",
+        "data/yearly/commodity_port/2019-20.csv",
+        "data/yearly/commodity_port/2020-21.csv",
+        "data/yearly/commodity_port/2021-22.csv",
+        "data/yearly/commodity_port/2022-23.csv",
+        "data/yearly/commodity_port/2023-24.csv",
+        "data/yearly/commodity_port/2024-25.csv",
+        "data/yearly/commodity_port/2025-26.csv",
+        "data/yearly/commodity_port/2026-27.csv"
+      ],
+      "format": "csv",
+      "description": "Each commodity group at each port, each financial year",
+      "schema": {
+        "fields": [
+          {
+            "name": "fiscal_year",
+            "type": "string",
+            "description": "Financial year, April to March, such as 2024-25"
+          },
+          {
+            "name": "flow",
+            "type": "string",
+            "description": "exports or imports"
+          },
+          {
+            "name": "commodity",
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Principal commodity group, as DGCI&S names it"
+          },
+          {
+            "name": "port",
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Indian port, airport, land border post or inland container depot"
+          },
+          {
+            "name": "unit",
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Unit of quantity. Blank where the commodity group has no single unit"
+          },
+          {
+            "name": "quantity",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Quantity, in unit. 0 where no quantity is printed"
+          },
+          {
+            "name": "value_inr",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Value in rupees"
+          },
+          {
+            "name": "value_usd",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Value in US dollars"
+          }
+        ]
+      }
+    },
+    {
+      "name": "country-port",
+      "path": [
+        "data/yearly/country_port/2000-01.csv",
+        "data/yearly/country_port/2001-02.csv",
+        "data/yearly/country_port/2002-03.csv",
+        "data/yearly/country_port/2003-04.csv",
+        "data/yearly/country_port/2004-05.csv",
+        "data/yearly/country_port/2005-06.csv",
+        "data/yearly/country_port/2006-07.csv",
+        "data/yearly/country_port/2007-08.csv",
+        "data/yearly/country_port/2008-09.csv",
+        "data/yearly/country_port/2009-10.csv",
+        "data/yearly/country_port/2010-11.csv",
+        "data/yearly/country_port/2011-12.csv",
+        "data/yearly/country_port/2012-13.csv",
+        "data/yearly/country_port/2013-14.csv",
+        "data/yearly/country_port/2014-15.csv",
+        "data/yearly/country_port/2015-16.csv",
+        "data/yearly/country_port/2016-17.csv",
+        "data/yearly/country_port/2017-18.csv",
+        "data/yearly/country_port/2018-19.csv",
+        "data/yearly/country_port/2019-20.csv",
+        "data/yearly/country_port/2020-21.csv",
+        "data/yearly/country_port/2021-22.csv",
+        "data/yearly/country_port/2022-23.csv",
+        "data/yearly/country_port/2023-24.csv",
+        "data/yearly/country_port/2024-25.csv",
+        "data/yearly/country_port/2025-26.csv",
+        "data/yearly/country_port/2026-27.csv"
+      ],
+      "format": "csv",
+      "description": "Each country through each port, each financial year",
+      "schema": {
+        "fields": [
+          {
+            "name": "fiscal_year",
+            "type": "string",
+            "description": "Financial year, April to March, such as 2024-25"
+          },
+          {
+            "name": "flow",
+            "type": "string",
+            "description": "exports or imports"
+          },
+          {
+            "name": "country",
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Country of destination for exports, of origin for imports, as DGCI&S spells it"
+          },
+          {
+            "name": "port",
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Indian port, airport, land border post or inland container depot"
+          },
+          {
+            "name": "value_inr",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Value in rupees"
+          },
+          {
+            "name": "value_usd",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Value in US dollars"
+          }
+        ]
+      }
+    },
+    {
+      "name": "detail",
+      "path": [
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2000-01.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2001-02.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2002-03.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2003-04.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2004-05.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2005-06.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2006-07.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2007-08.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2008-09.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2009-10.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2010-11.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2011-12.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2012-13.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2013-14.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2014-15.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2015-16.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2016-17.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2017-18.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2018-19.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2019-20.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2020-21.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2021-22.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2022-23.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2023-24.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2024-25.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2025-26.csv.gz",
+        "https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2026-27.csv.gz"
+      ],
+      "format": "csv",
+      "compression": "gz",
+      "description": "Every commodity group, country, port and month, as published",
+      "schema": {
+        "fields": [
+          {
+            "name": "month",
+            "type": "string",
+            "description": "Month, YYYY-MM"
+          },
+          {
+            "name": "flow",
+            "type": "string",
+            "description": "exports or imports"
+          },
+          {
+            "name": "commodity",
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Principal commodity group, as DGCI&S names it"
+          },
+          {
+            "name": "country",
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Country of destination for exports, of origin for imports, as DGCI&S spells it"
+          },
+          {
+            "name": "port",
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Indian port, airport, land border post or inland container depot"
+          },
+          {
+            "name": "unit",
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Unit of quantity. Blank where the commodity group has no single unit"
+          },
+          {
+            "name": "quantity",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Quantity, in unit. 0 where no quantity is printed"
+          },
+          {
+            "name": "value_inr",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Value in rupees"
+          },
+          {
+            "name": "value_usd",
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Value in US dollars"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+file,column,type,description
+data/monthly_totals.csv,month,string,"Month, YYYY-MM"
+data/monthly_totals.csv,flow,string,exports or imports
+data/monthly_totals.csv,value_inr,"number,null",Value in rupees
+data/monthly_totals.csv,value_usd,"number,null",Value in US dollars
+data/monthly/countries.csv,month,string,"Month, YYYY-MM"
+data/monthly/countries.csv,flow,string,exports or imports
+data/monthly/countries.csv,country,"string,null","Country of destination for exports, of origin for imports, as DGCI&S spells it"
+data/monthly/countries.csv,value_inr,"number,null",Value in rupees
+data/monthly/countries.csv,value_usd,"number,null",Value in US dollars
+data/monthly/commodities.csv,month,string,"Month, YYYY-MM"
+data/monthly/commodities.csv,flow,string,exports or imports
+data/monthly/commodities.csv,commodity,"string,null","Principal commodity group, as DGCI&S names it"
+data/monthly/commodities.csv,unit,"string,null",Unit of quantity. Blank where the commodity group has no single unit
+data/monthly/commodities.csv,quantity,"number,null","Quantity, in unit. 0 where no quantity is printed"
+data/monthly/commodities.csv,value_inr,"number,null",Value in rupees
+data/monthly/commodities.csv,value_usd,"number,null",Value in US dollars
+data/monthly/ports.csv,month,string,"Month, YYYY-MM"
+data/monthly/ports.csv,flow,string,exports or imports
+data/monthly/ports.csv,port,"string,null","Indian port, airport, land border post or inland container depot"
+data/monthly/ports.csv,value_inr,"number,null",Value in rupees
+data/monthly/ports.csv,value_usd,"number,null",Value in US dollars
+data/yearly/commodity_country/<year>.csv,fiscal_year,string,"Financial year, April to March, such as 2024-25"
+data/yearly/commodity_country/<year>.csv,flow,string,exports or imports
+data/yearly/commodity_country/<year>.csv,commodity,"string,null","Principal commodity group, as DGCI&S names it"
+data/yearly/commodity_country/<year>.csv,country,"string,null","Country of destination for exports, of origin for imports, as DGCI&S spells it"
+data/yearly/commodity_country/<year>.csv,unit,"string,null",Unit of quantity. Blank where the commodity group has no single unit
+data/yearly/commodity_country/<year>.csv,quantity,"number,null","Quantity, in unit. 0 where no quantity is printed"
+data/yearly/commodity_country/<year>.csv,value_inr,"number,null",Value in rupees
+data/yearly/commodity_country/<year>.csv,value_usd,"number,null",Value in US dollars
+data/yearly/commodity_port/<year>.csv,fiscal_year,string,"Financial year, April to March, such as 2024-25"
+data/yearly/commodity_port/<year>.csv,flow,string,exports or imports
+data/yearly/commodity_port/<year>.csv,commodity,"string,null","Principal commodity group, as DGCI&S names it"
+data/yearly/commodity_port/<year>.csv,port,"string,null","Indian port, airport, land border post or inland container depot"
+data/yearly/commodity_port/<year>.csv,unit,"string,null",Unit of quantity. Blank where the commodity group has no single unit
+data/yearly/commodity_port/<year>.csv,quantity,"number,null","Quantity, in unit. 0 where no quantity is printed"
+data/yearly/commodity_port/<year>.csv,value_inr,"number,null",Value in rupees
+data/yearly/commodity_port/<year>.csv,value_usd,"number,null",Value in US dollars
+data/yearly/country_port/<year>.csv,fiscal_year,string,"Financial year, April to March, such as 2024-25"
+data/yearly/country_port/<year>.csv,flow,string,exports or imports
+data/yearly/country_port/<year>.csv,country,"string,null","Country of destination for exports, of origin for imports, as DGCI&S spells it"
+data/yearly/country_port/<year>.csv,port,"string,null","Indian port, airport, land border post or inland container depot"
+data/yearly/country_port/<year>.csv,value_inr,"number,null",Value in rupees
+data/yearly/country_port/<year>.csv,value_usd,"number,null",Value in US dollars
+release: trade-<year>.csv.gz,month,string,"Month, YYYY-MM"
+release: trade-<year>.csv.gz,flow,string,exports or imports
+release: trade-<year>.csv.gz,commodity,"string,null","Principal commodity group, as DGCI&S names it"
+release: trade-<year>.csv.gz,country,"string,null","Country of destination for exports, of origin for imports, as DGCI&S spells it"
+release: trade-<year>.csv.gz,port,"string,null","Indian port, airport, land border post or inland container depot"
+release: trade-<year>.csv.gz,unit,"string,null",Unit of quantity. Blank where the commodity group has no single unit
+release: trade-<year>.csv.gz,quantity,"number,null","Quantity, in unit. 0 where no quantity is printed"
+release: trade-<year>.csv.gz,value_inr,"number,null",Value in rupees
+release: trade-<year>.csv.gz,value_usd,"number,null",Value in US dollars
