@@ -16,7 +16,7 @@ Latest month: 2026-09. Exports from 2000-04, Imports from 2021-04.
 | `data/yearly/commodity_port/<year>.csv` | Each commodity group at each port, each financial year |
 | `data/yearly/country_port/<year>.csv` | Each country through each port, each financial year |
 
-The [release](https://github.com/knowmoreindia/open-data/releases/tag/trade) has the full detail as `trade-<year>.csv.gz`, one file per financial year (2000-01 to 2026-27): 3,75,10,214 rows, one per commodity group, country, port and month, exactly as published, including rows with no trade.
+The [release](https://github.com/knowmoreindia/trade-data/releases/latest) has the full detail as `trade-<year>.csv.gz`, one file per financial year (2000-01 to 2026-27): 3,75,10,214 rows, one per commodity group, country, port and month, exactly as published, including rows with no trade.
 
 Columns are described in `codebook.csv` and `datapackage.json`.
 
@@ -25,9 +25,9 @@ Columns are described in `codebook.csv` and `datapackage.json`.
 ```python
 import pandas as pd
 
-base = "https://raw.githubusercontent.com/knowmoreindia/open-data/main/trade/data"
+base = "https://raw.githubusercontent.com/knowmoreindia/trade-data/main/data"
 countries = pd.read_csv(f"{base}/monthly/countries.csv")
-detail = pd.read_csv("https://github.com/knowmoreindia/open-data/releases/download/trade/trade-2026-27.csv.gz")
+detail = pd.read_csv("https://github.com/knowmoreindia/trade-data/releases/latest/download/trade-2026-27.csv.gz")
 ```
 
 ## Worth knowing
