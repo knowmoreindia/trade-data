@@ -51,3 +51,10 @@ release: trade-<year>.csv.gz,unit,"string,null",Unit of quantity. Blank where th
 release: trade-<year>.csv.gz,quantity,"number,null","Quantity, in unit. 0 where no quantity is printed"
 release: trade-<year>.csv.gz,value_inr,"number,null",Value in rupees
 release: trade-<year>.csv.gz,value_usd,"number,null",Value in US dollars
+data/wide/monthly_totals.csv,month,string,Month (YYYY-MM)
+data/wide/monthly_totals.csv,exports_usd,number,"Exports, US dollars"
+data/wide/monthly_totals.csv,imports_usd,number,"Imports, US dollars (blank before April 2021)"
+data/wide/monthly_totals.csv,balance_usd,number,"Exports minus imports, US dollars"
+data/wide/monthly_totals.csv,exports_inr,number,"Exports, rupees"
+data/wide/monthly_totals.csv,imports_inr,number,"Imports, rupees"
+data/wide/monthly_totals.csv,balance_inr,number,"Exports minus imports, rupees"

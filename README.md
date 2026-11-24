@@ -4,6 +4,25 @@ What India exports and imports, every month, in rupees and US dollars: by commod
 
 Latest month: 2026-09. Exports from 2000-04, Imports from 2021-04.
 
+## At a glance
+
+| Table | Rows | Period | Where |
+| --- | ---: | --- | --- |
+| monthly-totals | 384 | 2000-04 to 2026-09 | `data/monthly_totals.csv` |
+| countries | 80,780 | 2000-04 to 2026-09 | `data/monthly/countries.csv` |
+| commodities | 55,889 | 2000-04 to 2026-09 | `data/monthly/commodities.csv` |
+| ports | 68,543 | 2000-04 to 2026-09 | `data/monthly/ports.csv` |
+| commodity-country | 5,38,483 | 2000-01 to 2026-27 | `data/yearly/commodity_country/` (27 files) |
+| commodity-port | 2,88,952 | 2000-01 to 2026-27 | `data/yearly/commodity_port/` (27 files) |
+| country-port | 3,17,522 | 2000-01 to 2026-27 | `data/yearly/country_port/` (27 files) |
+| detail | 3,75,10,214 |  | release |
+
+## Spreadsheet-friendly files
+
+The same data, one row per item and one column per period, for spreadsheets.
+
+- `data/wide/monthly_totals.csv`: One row per month: exports, imports and the balance, in US dollars and rupees
+
 ## Files
 
 | Path | |
@@ -36,6 +55,20 @@ detail = pd.read_csv("https://github.com/knowmoreindia/trade-data/releases/lates
 - Countries are spelt as DGCI&S printed them at the time. Some names changed over the years (for example `GERMAN F REP` before `GERMANY`).
 - Commodity groups changed in April 2009, so older years use a different grouping.
 - The summed tables leave out rows with no trade.
+
+## How to cite
+
+Know More India, *Trade*, version 2026-11-24, https://github.com/knowmoreindia/trade-data. Licensed CC BY 4.0.
+
+```bibtex
+@misc{knowmoreindia_trade,
+  author = {{Know More India}},
+  title = {Trade},
+  year = {2026},
+  version = {2026-11-24},
+  howpublished = {\url{https://github.com/knowmoreindia/trade-data}}
+}
+```
 
 ## Licence
 

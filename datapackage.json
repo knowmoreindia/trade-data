@@ -577,6 +577,51 @@
           }
         ]
       }
+    },
+    {
+      "name": "monthly-totals-wide",
+      "path": "data/wide/monthly_totals.csv",
+      "format": "csv",
+      "description": "One row per month: exports, imports and the balance, in US dollars and rupees",
+      "schema": {
+        "fields": [
+          {
+            "name": "month",
+            "type": "string",
+            "description": "Month (YYYY-MM)"
+          },
+          {
+            "name": "exports_usd",
+            "type": "number",
+            "description": "Exports, US dollars"
+          },
+          {
+            "name": "imports_usd",
+            "type": "number",
+            "description": "Imports, US dollars (blank before April 2021)"
+          },
+          {
+            "name": "balance_usd",
+            "type": "number",
+            "description": "Exports minus imports, US dollars"
+          },
+          {
+            "name": "exports_inr",
+            "type": "number",
+            "description": "Exports, rupees"
+          },
+          {
+            "name": "imports_inr",
+            "type": "number",
+            "description": "Imports, rupees"
+          },
+          {
+            "name": "balance_inr",
+            "type": "number",
+            "description": "Exports minus imports, rupees"
+          }
+        ]
+      }
     }
   ]
 }
